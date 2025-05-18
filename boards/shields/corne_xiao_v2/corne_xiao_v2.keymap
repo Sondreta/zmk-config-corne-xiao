@@ -2,19 +2,33 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEF 0
+#define FUN 1
+
+#define MTL(layer) &mo_tog layer layer  // Momentary/toggle on the same layer
+#define MSL(layer) &mo_stk layer layer  // Momentary/sticky on the same layer
+
 / {
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "base";
-
             bindings = <
           &kp Q &kp W &kp E &kp R &kp T                      &kp Y   &kp U &kp I     &kp O   &kp P
           &kp A &kp S &kp D &kp F &kp G                      &kp H   &kp J &kp K     &kp L   &kp SEMI
           &kp Z &kp X &kp C &kp V &kp B                      &kp N   &kp M &kp COMMA &kp DOT &kp SLASH
 
-                  &kp LALT &kp SPACE &kp TAB                &kp RET &kp BSPC &kp RALT
+                  &kp LALT &kp SPACE &kp TAB                &kp RET &kp BSPC MSL(FUN)
+            >;
+        };
+
+        function_layer {
+            bindings = <
+          &kp Q &kp W &kp E &kp R &kp T                      &kp Y   &kp U &kp I     &kp O   &kp P
+          &kp A &kp S &kp D &kp F &kp G                      &kp H   &kp J &kp K     &kp L   &kp SEMI
+          &kp Z &kp X &kp C &kp V &kp B                      &kp N   &kp M &kp COMMA &kp DOT &kp SLASH
+
+                  &bt BT_PREV &bt BT_CLR &bt BT_NXT          &kp RET &kp BSPC &trans
             >;
         };
     };
