@@ -5,9 +5,6 @@
 #define DEF 0
 #define FUN 1
 
-#define MTL(layer) &mo_tog layer layer  // Momentary/toggle on the same layer
-#define MSL(layer) &mo_stk layer layer  // Momentary/sticky on the same layer
-
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -18,7 +15,7 @@
           &kp A &kp S &kp D &kp F &kp G                      &kp H   &kp J &kp K     &kp L   &kp SEMI
           &kp Z &kp X &kp C &kp V &kp B                      &kp N   &kp M &kp COMMA &kp DOT &kp SLASH
 
-                  &kp LALT &kp SPACE &kp TAB                &kp RET &kp BSPC MSL(FUN)
+                  &kp LALT &kp SPACE &kp TAB                &kp RET &kp BSPC &mo FUN
             >;
         };
 
