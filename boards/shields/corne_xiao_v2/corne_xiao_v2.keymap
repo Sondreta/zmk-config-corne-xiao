@@ -28,7 +28,7 @@
           &kp A &kp S &kp D &kp F &kp G                      &kp H   &kp J &kp K     &kp L   &kp SEMI
           &kp Z &kp X &kp C &kp V &kp B                      &kp N   &kp M &kp COMMA &kp DOT &kp SLASH
 
-                  &bt BT_PREV &bt BT_CLR &bt BT_NXT          &kp RET &kp BSPC &trans
+                  &bt BT_PRV &bt BT_CLR &bt BT_NXT          &kp RET &kp BSPC &trans
             >;
         };
     };
