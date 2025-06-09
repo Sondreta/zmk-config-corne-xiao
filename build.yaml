@@ -1,12 +1,11 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: corne_xiao_v2_left rgbled_adapter
-    snippet: zmk-usb-logging
+    shield: corne_xiao_v2_left
 
   - board: seeeduino_xiao_ble
-    shield: corne_xiao_v2_right rgbled_adapter
-    snippet: zmk-usb-logging
+    shield: corne_xiao_v2_right
 
   - board: seeeduino_xiao_ble
     shield: settings_reset
+
